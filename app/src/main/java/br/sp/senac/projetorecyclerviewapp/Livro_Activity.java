@@ -22,6 +22,7 @@ public class Livro_Activity extends AppCompatActivity {
         imagemLivro =  findViewById(R.id.idImgLivroN);
 
         Intent intent =  getIntent();
+
         String titulo = intent.getExtras().getString("Titulo");
         String descricao = intent.getExtras().getString("Descricao");
         String categoria = intent.getExtras().getString("Categoria");

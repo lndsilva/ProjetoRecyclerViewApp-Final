@@ -21,19 +21,17 @@ public class MainActivity extends AppCompatActivity {
 
         //Inserindo os livros no arrayList vazio
         lstLivros = new ArrayList<>();
+        lstLivros.add(new Livros("O dilema","Auto ajuda","O dilema do porco espinho",R.drawable.dilema));
+        lstLivros.add(new Livros("Como fazer Amigos","Auto ajuda","Como fazer amigos",R.drawable.amigos));
         lstLivros.add(new Livros("The Vegitarian ", "Romance", "The Vegitarian Life", R.drawable.thevigitarian));
         lstLivros.add(new Livros("The Wild Robot", "Categoria do livro", "Descrição do livro", R.drawable.thewildrobot));
         lstLivros.add(new Livros("The Martian", "Categoria do livro", "Descrição do livro", R.drawable.themartian));
         lstLivros.add(new Livros("Privacy", "Categoria do livro", "Descrição do livro", R.drawable.privacy));
         lstLivros.add(new Livros("Maria Semples", "Categoria do livro", "Descrição do livro", R.drawable.mariasemples));
         lstLivros.add(new Livros("Hedied With", "Categoria do livro", "Descrição do livro", R.drawable.hediedwith));
-        lstLivros.add(new Livros("The Vegitarian ", "Categoria do livro", "Descrição do livro", R.drawable.thevigitarian));
-        lstLivros.add(new Livros("The Wild Robot", "Categoria do livro", "Descrição do livro", R.drawable.thewildrobot));
-        lstLivros.add(new Livros("The Martian", "Categoria do livro", "Descrição do livro", R.drawable.themartian));
-        lstLivros.add(new Livros("Privacy", "Categoria do livro", "Descrição do livro", R.drawable.privacy));
-        lstLivros.add(new Livros("Maria Semples", "Categoria do livro", "Descrição do livro", R.drawable.mariasemples));
-        lstLivros.add(new Livros("Hedied With", "Categoria do livro", "Descrição do livro", R.drawable.hediedwith));
-        lstLivros.add(new Livros("The Vegitarian ", "Categoria do livro", "Descrição do livro", R.drawable.thevigitarian));
+        lstLivros.add(new Livros("O dilema","Auto ajuda","O dilema do porco espinho",R.drawable.dilema));
+        lstLivros.add(new Livros("Como fazer Amigos","Auto ajuda","Como fazer amigos",R.drawable.amigos));
+        lstLivros.add(new Livros("The Vegitarian ", "Romance", "The Vegitarian Life", R.drawable.thevigitarian));
         lstLivros.add(new Livros("The Wild Robot", "Categoria do livro", "Descrição do livro", R.drawable.thewildrobot));
         lstLivros.add(new Livros("The Martian", "Categoria do livro", "Descrição do livro", R.drawable.themartian));
         lstLivros.add(new Livros("Privacy", "Categoria do livro", "Descrição do livro", R.drawable.privacy));
@@ -52,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
 
         //GriLayoutManager necessário a inserção de colunas
         mRecyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 3));
+
+        //Para melhorar a performance do RecyclerView na listagem
+        mRecyclerView.setHasFixedSize(true);
+
         //Inserindo os valores na lista do RecyclerView
         mRecyclerView.setAdapter(mAdapter);
 

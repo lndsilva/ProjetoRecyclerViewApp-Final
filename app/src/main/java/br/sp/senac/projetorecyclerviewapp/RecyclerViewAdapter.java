@@ -38,10 +38,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
 
-
+        //passando valores para o RecyclerView
         holder.tvTituloLivro.setText(mData.get(position).getTitulo());
         holder.imgLivro.setImageResource(mData.get(position).getMiniatura());
-
+        //Evento de clique no cardView
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,17 +54,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 intent.putExtra("Miniatura",mData.get(position).getMiniatura());
 
                 mContext.startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-
-
-
-
             }
         });
     }
 
     @Override
     public int getItemCount() {
-
+        //tamanho da lista de livros
         return mData.size();
     }
 
