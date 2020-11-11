@@ -46,10 +46,14 @@ public class MainActivity extends AppCompatActivity {
         //Instânciando o adaptador com os valores necessários
         RecyclerViewAdapter mAdapter = new RecyclerViewAdapter(getApplicationContext(), lstLivros);
         //Criando o layout para inserção dos valores
-        mRecyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(),3));
+
+        //LayoutManager não é necessário inserção de colunas
+        //mRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+
+        //GriLayoutManager necessário a inserção de colunas
+        mRecyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 3));
         //Inserindo os valores na lista do RecyclerView
         mRecyclerView.setAdapter(mAdapter);
-
 
 
     }
