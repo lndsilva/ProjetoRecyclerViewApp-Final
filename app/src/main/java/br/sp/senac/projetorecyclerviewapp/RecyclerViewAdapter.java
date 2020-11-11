@@ -37,6 +37,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
+
+
         holder.tvTituloLivro.setText(mData.get(position).getTitulo());
         holder.imgLivro.setImageResource(mData.get(position).getMiniatura());
 
@@ -48,8 +50,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
                 intent.putExtra("Titulo",mData.get(position).getTitulo());
                 intent.putExtra("Descricao",mData.get(position).getDescricao());
-                intent.putExtra("Titulo",mData.get(position).getTitulo());
+                intent.putExtra("Categoria",mData.get(position).getCategoria());
                 intent.putExtra("Miniatura",mData.get(position).getMiniatura());
+
                 mContext.startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
 
 
@@ -69,7 +72,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         TextView tvTituloLivro;
         ImageView imgLivro;
-
         CardView cardView;
 
 
@@ -77,10 +79,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
             super(itemView);
 
-            tvTituloLivro = (TextView) itemView.findViewById(R.id.id_lblTituloLivro);
-            imgLivro = (ImageView) itemView.findViewById(R.id.id_imgLivro);
-
-            cardView = (CardView) itemView.findViewById(R.id.idCardView);
+            tvTituloLivro = itemView.findViewById(R.id.id_lblTituloLivro);
+            imgLivro =  itemView.findViewById(R.id.id_imgLivro);
+            cardView = itemView.findViewById(R.id.idCardView);
 
 
         }

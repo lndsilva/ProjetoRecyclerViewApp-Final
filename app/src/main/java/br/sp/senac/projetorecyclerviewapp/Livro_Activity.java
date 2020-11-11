@@ -16,18 +16,20 @@ public class Livro_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.livro_layout);
 
-        txtTitulo = (TextView)findViewById(R.id.txtIdTitulo);
-        txtDescricao = (TextView)findViewById(R.id.txtIdDescricao);
-        txtCategoria = (TextView)findViewById(R.id.txtIdCategoria);
-        imagemLivro =  (ImageView) findViewById(R.id.idImgLivroN);
+        txtTitulo = findViewById(R.id.txtIdTitulo);
+        txtDescricao = findViewById(R.id.txtIdDescricao);
+        txtCategoria = findViewById(R.id.txtIdCategoria);
+        imagemLivro =  findViewById(R.id.idImgLivroN);
 
         Intent intent =  getIntent();
         String titulo = intent.getExtras().getString("Titulo");
         String descricao = intent.getExtras().getString("Descricao");
+        String categoria = intent.getExtras().getString("Categoria");
         int miniatura = intent.getExtras().getInt("Miniatura");
 
         txtTitulo.setText(titulo);
         txtDescricao.setText(descricao);
+        txtCategoria.setText(categoria);
         imagemLivro.setImageResource(miniatura);
 
     }

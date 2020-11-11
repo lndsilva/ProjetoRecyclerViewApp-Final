@@ -2,22 +2,24 @@ package br.sp.senac.projetorecyclerviewapp;
 
 public class Livros {
 
+    //Atributos globais
+
     private String titulo;
     private String categoria;
     private String descricao;
     private int miniatura;
     
-
+    //construtor vazio
     public Livros() {
     }
-
+    //construtor com parâmetros
     public Livros(String titulo, String categoria, String descricao, int miniatura) {
         this.titulo = titulo;
         this.categoria = categoria;
         this.descricao = descricao;
         this.miniatura = miniatura;
     }
-
+    //métodos de acesso Get e Set
     public String getTitulo() {
         return titulo;
     }
