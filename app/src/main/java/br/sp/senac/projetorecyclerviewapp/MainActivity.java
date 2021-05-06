@@ -17,10 +17,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         //Inserindo os livros no arrayList vazio
         lstLivros = new ArrayList<>();
+
+        lstLivros.add(new Livros("Eu e Esse Meu Coração","Auto ajuda","Eu e Esse Meu Coração",R.drawable.coracao));
+        lstLivros.add(new Livros("Dieta","Alimentação","Este não é mais um livro de dieta: O novo e libertador estilo de vida alimentar para saúde e boa",R.drawable.dieta));
         lstLivros.add(new Livros("O dilema","Auto ajuda","O dilema do porco espinho",R.drawable.dilema));
         lstLivros.add(new Livros("Como fazer Amigos","Auto ajuda","Como fazer amigos",R.drawable.amigos));
         lstLivros.add(new Livros("The Vegitarian ", "Romance", "The Vegitarian Life", R.drawable.thevigitarian));
@@ -49,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
        // mRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), RecyclerView.HORIZONTAL,true));
 
         //GriLayoutManager necessário a inserção de colunas
-        mRecyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 3));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(),3));
 
         //Para melhorar a performance do RecyclerView na listagem
         mRecyclerView.setHasFixedSize(true);

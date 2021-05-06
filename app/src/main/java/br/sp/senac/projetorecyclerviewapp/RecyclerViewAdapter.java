@@ -32,6 +32,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         LayoutInflater mInflater = LayoutInflater.from(mContext);
         view = mInflater.inflate(R.layout.cardview_item_livros, parent, false);
+
         return new MyViewHolder(view);
     }
 
@@ -48,10 +49,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
                 Intent intent = new Intent(mContext, Livro_Activity.class);
 
-                intent.putExtra("Titulo",mData.get(position).getTitulo());
-                intent.putExtra("Descricao",mData.get(position).getDescricao());
-                intent.putExtra("Categoria",mData.get(position).getCategoria());
-                intent.putExtra("Miniatura",mData.get(position).getMiniatura());
+                intent.putExtra("Titulo", mData.get(position).getTitulo());
+                intent.putExtra("Descricao", mData.get(position).getDescricao());
+                intent.putExtra("Categoria", mData.get(position).getCategoria());
+                intent.putExtra("Miniatura", mData.get(position).getMiniatura());
 
                 mContext.startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
             }
@@ -76,7 +77,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             super(itemView);
 
             tvTituloLivro = itemView.findViewById(R.id.id_lblTituloLivro);
-            imgLivro =  itemView.findViewById(R.id.id_imgLivro);
+            imgLivro = itemView.findViewById(R.id.id_imgLivro);
             cardView = itemView.findViewById(R.id.idCardView);
 
 
