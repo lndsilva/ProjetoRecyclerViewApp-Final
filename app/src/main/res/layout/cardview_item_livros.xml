@@ -18,17 +18,18 @@
             android:id="@+id/id_imgLivro"
             android:layout_width="match_parent"
             android:layout_height="160dp"
-            android:background="#2D2D2D"
+            android:background="#2d2d2d"
             android:scaleType="centerCrop" />
 
         <TextView
+            android:textStyle="bold"
             android:id="@+id/id_lblTituloLivro"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="Título Livro"
+            android:text="Titulo"
             android:textColor="#2d2d2d"
-            android:textSize="13sp" />
+            android:textSize="10sp" />
 
     </LinearLayout>
 

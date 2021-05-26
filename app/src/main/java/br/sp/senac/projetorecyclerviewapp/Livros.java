@@ -16,8 +16,6 @@ public class Livros {
     }
 
     //Criando os métodos de acesso - getters e setters
-
-
     public String getTitulo() {
         return titulo;
     }

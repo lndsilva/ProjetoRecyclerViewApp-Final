@@ -19,6 +19,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private Context mContext;
     private List<Livros> mData;
 
+    //Construtor da classe
     public RecyclerViewAdapter(Context mContext, List<Livros> mData) {
         this.mContext = mContext;
         this.mData = mData;
@@ -33,12 +34,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         LayoutInflater mInflater = LayoutInflater.from(mContext);
         view = mInflater.inflate(R.layout.cardview_item_livros, parent, false);
 
+
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
-
         //passando valores para o RecyclerView
         holder.tvTituloLivro.setText(mData.get(position).getTitulo());
         holder.imgLivro.setImageResource(mData.get(position).getMiniatura());
