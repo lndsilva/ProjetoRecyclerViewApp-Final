@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         lstLivros.add(new Livros("Maria Semples", "Categoria do livro", "Descrição do livro", R.drawable.mariasemples));
         lstLivros.add(new Livros("Hedied With", "Categoria do livro", "Descrição do livro", R.drawable.hediedwith));
         lstLivros.add(new Livros("O poder do agora", "Auto Ajuda", "Um guia para a iluminação espiritual ", R.drawable.poder_agora));
+        lstLivros.add(new Livros("Pai rico, pai pobre para jovens", "Administração e Negócios", "o que a escola não ensina sobre dinheiro", R.drawable.pai));
 
         //declarando a variavel xml enviando para o java
         RecyclerView mRecyclerView = findViewById(R.id.id_recyclerView);
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         //Criando o layout para inserção dos valores
 
         //LayoutManager não é necessário inserção de colunas - pode ser utilizado na vertical ou horizontal
-        //mRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), RecyclerView.HORIZONTAL,true));
+       // mRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), RecyclerView.HORIZONTAL,true));
 
         //GriLayoutManager necessário a inserção de colunas
         mRecyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 3));
