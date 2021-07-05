@@ -4,58 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Livro_Activity"
-    android:background="#fcfcfc">
+    android:background="#fcfcfc"
+    android:orientation="vertical"
+    tools:context=".Livro_Activity">
 
-    <androidx.core.widget.NestedScrollView
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/idToolBarLivros"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:menu="@menu/menu_livros"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:padding="10dp">
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/idImgLivroN"
+            android:layout_width="300dp"
+            android:layout_height="350dp"
+            android:background="@drawable/pai"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/txtIdTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Titulo do Livro"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtIdCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
+            android:text="Categoria" />
+
+        <TextView
+            android:id="@+id/txtIdDescricao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:text="Descrição"
+            android:textAlignment="inherit"
+            android:textSize="18sp" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/idImgLivroN"
-                android:layout_width="125dp"
-                android:layout_height="170dp"
-                android:background="#2d2d2d"
-                android:scaleType="centerCrop" />
-
-            <TextView
-                android:id="@+id/txtIdTitulo"
+            <RatingBar
+                android:id="@+id/rtbLivros"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Titulo do Livro"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:numStars="1"
+                android:stepSize="1" />
 
             <TextView
-                android:id="@+id/txtIdCategoria"
+                android:id="@+id/txtNumValRating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#edecec"
+                android:gravity="center_horizontal"
                 android:padding="8dp"
-                android:text="Categoria" />
-
-            <TextView
-                android:id="@+id/txtIdDescricao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#edecec"
-                android:padding="8dp"
-                android:text="Descrição"
+                android:text="4.5"
+                android:textAlignment="inherit"
                 android:textSize="18sp" />
-
-
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
 
 </LinearLayout>

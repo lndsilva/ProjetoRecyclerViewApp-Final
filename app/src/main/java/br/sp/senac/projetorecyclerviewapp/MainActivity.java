@@ -18,14 +18,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         setContentView(R.layout.activity_main);
 
         //Inserindo os livros no arrayList vazio
         lstLivros = new ArrayList<>();
 
         lstLivros.add(new Livros("A realidade de Madhu", "Ficção Científica", " Madhu é abduzida por uma nave intergaláctica", R.drawable.a_realidade));
+        lstLivros.add(new Livros("O sol é para todos","Ficção","Um dos maiores clássicos da literatura mundial",R.drawable.sol_para_todos));
         lstLivros.add(new Livros("Eu e Esse Meu Coração", "Auto ajuda", "Eu e Esse Meu Coração", R.drawable.coracao));
         lstLivros.add(new Livros("Dieta", "Alimentação", "Este não é mais um livro de dieta: O novo e libertador estilo de vida alimentar para saúde e boa", R.drawable.dieta));
         lstLivros.add(new Livros("O dilema", "Auto ajuda", "O dilema do porco espinho", R.drawable.dilema));
@@ -37,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         lstLivros.add(new Livros("Maria Semples", "Categoria do livro", "Descrição do livro", R.drawable.mariasemples));
         lstLivros.add(new Livros("Hedied With", "Categoria do livro", "Descrição do livro", R.drawable.hediedwith));
         lstLivros.add(new Livros("O dilema", "Auto ajuda", "O dilema do porco espinho", R.drawable.dilema));
+        lstLivros.add(new Livros("Iracema", "Clássico", "Uma das histórias de amor mais aclamadas da literatura brasileira", R.drawable.iracema));
+        lstLivros.add(new Livros("O Homem Que Sabia Javanês", "Clássico", "Uma chamada que muitos deixariam passar, Castelo enxergou uma oportunidade única.", R.drawable.ohomequesabia));
         lstLivros.add(new Livros("Como fazer Amigos", "Auto ajuda", "Como fazer amigos", R.drawable.amigos));
         lstLivros.add(new Livros("The Vegitarian ", "Romance", "The Vegitarian Life", R.drawable.thevigitarian));
         lstLivros.add(new Livros("The Wild Robot", "Categoria do livro", "Descrição do livro", R.drawable.thewildrobot));
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         //GriLayoutManager necessário a inserção de colunas
         mRecyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 3));
 
-        //Para melhorar a performance do RecyclerView na listagem
+        //Para melhorar a performance do RecyclerView na listagem com um tamanho fixo
         mRecyclerView.setHasFixedSize(true);
 
         //Inserindo os valores na lista do RecyclerView

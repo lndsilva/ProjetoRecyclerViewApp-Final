@@ -16,8 +16,9 @@ import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
 
-    private Context mContext;
-    private List<Livros> mData;
+    private Context mContext; //É a classe onde estou
+    private List<Livros> mData; //O objeto que irá representar os dados
+
 
     //Construtor da classe
     public RecyclerViewAdapter(Context mContext, List<Livros> mData) {
@@ -37,6 +38,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return new MyViewHolder(view);
     }
 
+    //Será realizada a montagem dos dados.
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
         //passando valores para o RecyclerView

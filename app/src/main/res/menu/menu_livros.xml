@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/mComprar"
+        android:icon="@drawable/ic_baseline_add_business"
+        android:orderInCategory="2"
+        android:title="Comprar"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mCarrinho"
+        android:icon="@drawable/ic_baseline_add_shopping_cart"
+        android:orderInCategory="1"
+        android:title="Carrinho"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/mFav"
+        android:icon="@drawable/ic_baseline_favorite"
+        android:orderInCategory="3"
+        android:title="Comprar"
+        app:showAsAction="ifRoom" />
+
+</menu>
